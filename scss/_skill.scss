@@ -1,0 +1,245 @@
+.skill-container {
+  display: none;
+
+  &.load-right {
+    width: 100%;
+    color: $light-color;
+    margin: auto;
+    opacity: 0.8;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+
+    li {
+      position: relative;
+      list-style: none;
+      margin: 5rem auto;
+      width: 400px;
+      text-transform: uppercase;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -webkit-calc(100% + 50%);
+        top: -moz-calc(100% + 50%);
+        top: calc(100% + 50%);
+        left: 0;
+        width: 100%;
+        height: 15px;
+        opacity: 0.2;
+        background: $secondary-color;
+        -webkit-border-top-right-radius: 15px;
+        border-top-right-radius: 15px;
+        -webkit-border-bottom-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -webkit-calc(100% + 50%);
+        top: -moz-calc(100% + 50%);
+        top: calc(100% + 50%);
+        left: 0;
+        width: 0;
+        height: 15px;
+        background: $secondary-color;
+        -webkit-border-top-right-radius: 15px;
+        border-top-right-radius: 15px;
+        -webkit-border-bottom-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        -webkit-animation: forwards 2s ease;
+        -moz-animation: forwards 2s ease;
+        -o-animation: forwards 2s ease;
+        animation: forwards 2s ease;
+      }
+    }
+    li.html::after {
+      -webkit-animation-name: html;
+      -moz-animation-name: html;
+      -o-animation-name: html;
+      animation-name: html;
+    }
+    @-webkit-keyframes html {
+      to {
+        width: 96%;
+      }
+    }
+    @-moz-keyframes html {
+      to {
+        width: 96%;
+      }
+    }
+    @-o-keyframes html {
+      to {
+        width: 96%;
+      }
+    }
+    @keyframes html {
+      to {
+        width: 96%;
+      }
+    }
+    li.js::after {
+      -webkit-animation-name: js;
+      -moz-animation-name: js;
+      -o-animation-name: js;
+      animation-name: js;
+    }
+    @-webkit-keyframes js {
+      to {
+        width: 70%;
+      }
+    }
+    @-moz-keyframes js {
+      to {
+        width: 70%;
+      }
+    }
+    @-o-keyframes js {
+      to {
+        width: 70%;
+      }
+    }
+    @keyframes js {
+      to {
+        width: 70%;
+      }
+    }
+    li.jq::after {
+      -webkit-animation-name: jq;
+      -moz-animation-name: jq;
+      -o-animation-name: jq;
+      animation-name: jq;
+    }
+    @-webkit-keyframes jq {
+      to {
+        width: 70%;
+      }
+    }
+    @-moz-keyframes jq {
+      to {
+        width: 70%;
+      }
+    }
+    @-o-keyframes jq {
+      to {
+        width: 70%;
+      }
+    }
+    @keyframes jq {
+      to {
+        width: 70%;
+      }
+    }
+    li.bt::after {
+      -webkit-animation-name: bt;
+      -moz-animation-name: bt;
+      -o-animation-name: bt;
+      animation-name: bt;
+    }
+    @-webkit-keyframes bt {
+      to {
+        width: 77%;
+      }
+    }
+    @-moz-keyframes bt {
+      to {
+        width: 77%;
+      }
+    }
+    @-o-keyframes bt {
+      to {
+        width: 77%;
+      }
+    }
+    @keyframes bt {
+      to {
+        width: 77%;
+      }
+    }
+    li.git::after {
+      -webkit-animation-name: git;
+      -moz-animation-name: git;
+      -o-animation-name: git;
+      animation-name: git;
+    }
+    @-webkit-keyframes git {
+      to {
+        width: 77%;
+      }
+    }
+    @-moz-keyframes git {
+      to {
+        width: 77%;
+      }
+    }
+    @-o-keyframes git {
+      to {
+        width: 77%;
+      }
+    }
+    @keyframes git {
+      to {
+        width: 77%;
+      }
+    }
+    li.cd::after {
+      -webkit-animation-name: cd;
+      -moz-animation-name: cd;
+      -o-animation-name: cd;
+      animation-name: cd;
+    }
+    @-webkit-keyframes cd {
+      to {
+        width: 99%;
+      }
+    }
+    @-moz-keyframes cd {
+      to {
+        width: 99%;
+      }
+    }
+    @-o-keyframes cd {
+      to {
+        width: 99%;
+      }
+    }
+    @keyframes cd {
+      to {
+        width: 99%;
+      }
+    }
+    li.ps::after {
+      -webkit-animation-name: ps;
+      -moz-animation-name: ps;
+      -o-animation-name: ps;
+      animation-name: ps;
+    }
+    @-webkit-keyframes ps {
+      to {
+        width: 60%;
+      }
+    }
+    @-moz-keyframes ps {
+      to {
+        width: 60%;
+      }
+    }
+    @-o-keyframes ps {
+      to {
+        width: 60%;
+      }
+    }
+    @keyframes ps {
+      to {
+        width: 60%;
+      }
+    }
+  }
+}

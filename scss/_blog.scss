@@ -1,0 +1,90 @@
+.blog-container{
+    background: rgba(255, 255, 255, 0.064);
+    -o-background-size: cover;
+       background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+
+    h1{
+        font-size: 3rem;
+        color: $secondary-color;
+    }
+    p{
+        opacity: 0.8;
+        color: $light-color;
+    }
+
+    .blog-grid{
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-areas: 'blog-1 blog-2 blog-3';
+        grid-gap: 2em;
+        width: 100%;
+        padding: 5% 0;
+
+        .blog{
+            width: 100%;
+
+            h3{
+                font-size: 2em;
+        padding-left: .3em;
+                color: $light-color;
+                margin: .5em 0;
+            }
+    
+             p{
+        padding-left: .3em;
+                margin-bottom: 1em;
+            }
+            .img-container{
+                position: relative;
+                height: 100%;
+                overflow: hidden;
+                width: 100%;
+                img{
+                    width: 100%;
+            }
+            #blog{
+                color: $light-color;
+                background: $secondary-color;
+                outline: none;
+                border: none;
+                position: absolute;
+                left: 0;
+                bottom: 1em;
+                opacity: 0.8;
+                cursor: pointer;
+
+                &:hover{
+                    opacity: 1;
+                }
+            }
+            }
+            
+        }
+        .tag > a{
+            color: $secondary-color;
+        }
+        
+        .blog-1{
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+            grid-area: blog-1;
+        }
+
+        .blog-2{
+            -ms-grid-row: 1;
+            -ms-grid-column: 2;
+            grid-area: blog-2;
+        }
+
+        .blog-3{
+            -ms-grid-row: 1;
+            -ms-grid-column: 3;
+            grid-area: blog-3;
+        }
+    }
+}

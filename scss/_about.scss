@@ -1,0 +1,61 @@
+// ABOUT PAGE
+#about{
+    background: rgba(10, 10, 10, 0.082);
+    color: $light-color;
+
+
+    .about{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+           -moz-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                justify-content: space-between;
+        
+
+                
+
+        .potrait2{
+            width: 35%;
+            img{
+                -webkit-border-radius: 5px;
+                        border-radius: 5px;
+                border: .8px solid rgba(255, 255, 255, 0.199);
+                padding: .3em;
+                overflow: hidden;
+                width: 100%;
+         }
+        }
+        .about-info{
+            width: 62%;
+            overflow: hidden;
+
+            h2, h3, p{
+                margin-bottom: 1.6rem;
+                opacity: 0.8;
+            }
+            h2{
+                font-size: 3rem;
+            }
+
+            .resume{
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-justify-content: space-around;
+                    -ms-flex-pack: distribute;
+                        justify-content: space-around;
+            }
+        }
+    }
+}

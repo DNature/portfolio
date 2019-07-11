@@ -1,0 +1,708 @@
+// Large screens
+@include mediaLg{
+    
+    // Verticl lines
+    .vr{
+        padding: 0 5% 0 8%;
+    }
+
+
+    // Navigation Bar
+    nav.navbar{
+        width: 4.3rem;
+        height: 100vh;
+        background: $primary-color;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        text-transform: uppercase;
+        border-right: 0.6px solid rgba(255, 255, 255, 0.253);
+
+        ul{
+            top: 50%;
+            -webkit-transform: translateY(50%);
+               -moz-transform: translateY(50%);
+                -ms-transform: translateY(50%);
+                 -o-transform: translateY(50%);
+                    transform: translateY(50%);
+            li{
+            padding: .7rem 0;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+               -moz-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+                    position: relative;
+
+                .hide{
+                    font-size: .7em;
+                    position: absolute;
+                    opacity: 0;
+                }
+                .show{
+                    font-size: 1.1em;
+                    color: lighten($primary-color, 35);
+                    -webkit-animation: .5s scale 8;
+                       -moz-animation: .5s scale 8;
+                         -o-animation: .5s scale 8;
+                            animation: .5s scale 8;
+                }
+
+                &:hover{
+                    border-bottom: .7px solid $secondary-color;
+                        .show{
+                            visibility: hidden;
+                            opacity: 0;
+
+                        
+                    }
+                    .hide{
+                            opacity: 1;
+                            color: $secondary-color;
+                    }
+                }
+            }
+        }
+
+        &.hide{
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+    .about-info{
+    .right{
+            margin-bottom: 3.5rem;
+        }
+    .btn{
+        bottom: 3rem;
+    }
+    }
+
+    // Container
+    .container{
+        padding: 5% 5% 5% 8%;
+    }
+
+    //scroll animations
+    #about, .services, .portfolio, .testimonials, .contact{
+        
+        @include fade-in();
+
+            &.fade-in{
+                @include fade();
+            }
+    }
+}
+
+// Medium screens
+@include mediaMd{
+    .hidden{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+           -moz-box-orient: horizontal;
+           -moz-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+
+        .img{
+            width: 70%;
+            margin: auto;
+        }
+
+        .container-2{
+            width: 100%;
+        }
+    }
+    .container{
+        padding: 10%;
+    }
+    .vr .line{
+        display:none;
+    }
+    // Navigation Bar
+    nav.navbar{
+        height: 4rem;
+        width: 100vw;
+        background: $primary-color;
+        position: fixed;
+        margin: auto;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        text-transform: uppercase;
+
+        ul{
+            width: 80%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin: 1.2rem auto;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+               -moz-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+
+
+            li{
+            padding: 0 2rem;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+               -moz-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+               -moz-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+                position: relative;
+                
+                .hide{
+                    color: $light-color;
+                    position: absolute;
+                    left: 50%;
+                    opacity: 0;
+                    -webkit-transform: translateX(-50%);
+                       -moz-transform: translateX(-50%);
+                        -ms-transform: translateX(-50%);
+                         -o-transform: translateX(-50%);
+                            transform: translateX(-50%);
+                }
+                .show{
+                    font-size: 1.3em;
+                    color: lighten($primary-color, 35);
+                    -webkit-animation: .5s scale 8;
+                       -moz-animation: .5s scale 8;
+                         -o-animation: .5s scale 8;
+                            animation: .5s scale 8;
+                }
+
+                &:hover{
+                        .show{
+                            visibility: hidden;
+                            opacity: 0;
+
+                        
+                    }
+                    .hide{
+                            opacity: 1;
+                            color: $secondary-color;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    // Home
+    .info{
+        margin-top: 10%;
+        h1{
+            font-size: 2.3rem;
+        }
+    }
+
+
+    // About 
+    #about{
+        height: 100%;
+        .about{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        
+            .potrait2{
+                width: 50%;
+            }
+
+            .about-info{
+                width: 100%;
+                padding: 0;
+                height: 100%;
+
+                    .right{
+                        margin-bottom: 3.5rem;
+                    }
+                .btn{
+                    bottom: 3rem;
+                }
+
+                h2{
+            font-size: 2.3rem;
+        }
+                
+                h2, h3, p{
+                margin-bottom: .55rem;
+                }
+                
+            }
+            
+        }
+    }
+
+    .services{
+        h1{
+            font-size: 2.3rem;
+        }
+        .grid-container{
+            -ms-grid-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+                                                                                                                                                                                                                                                                                                grid-template-areas: 'one two' 'three four' 'five six';
+
+            .one{
+                -ms-grid-row: 1;
+                -ms-grid-column: 1;
+                grid-area: one;
+                grid: 1;
+            }
+            .two{
+                grid-area: two;
+            }
+            .three{
+                grid-area: three;
+            }
+            .four{
+                grid-area: four;
+            }
+            .five{
+                grid-area: five;
+            }
+            .six{
+                grid-area: six;
+            }
+        }
+    }
+
+    // portfolio
+    .portfolio{
+        
+        #portfolio{
+            h1{
+            font-size: 2.3rem;
+        }
+            #items{
+                -ms-grid-columns: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
+                                                                                                                                                                                                                                                                                                grid-template-areas: 'item1 item2' 'item3 item4' 'item5 item6';
+
+            #item-1{
+                grid-area: item1;
+            }
+            #item-2{
+                grid-area: item2;
+            }
+            #item-3{
+                grid-area: item3;
+            }
+            #item-4{
+                grid-area: item4;
+            }
+            #item-5{
+                grid-area: item5;
+            }
+            #item-6{
+                grid-area: item6;
+            }
+            }
+        }
+    }
+
+    // Contact
+    .contact-container{
+        .cont-box{
+            display: block;
+
+            .cont1{
+        width: 100%;
+            }
+
+            .cont2{
+        width: 100%;
+
+            }
+        }
+    }
+
+    .aside{
+    padding-top: 10%;
+
+        h1{
+            font-size: 2rem;
+        }
+
+        
+    }
+    #clients{
+            .test{
+                h1{
+                    font-size: 2.3rem;
+                }
+            }
+        }
+
+        .skill-container{
+            &.load-right{
+        width: 100%;
+        color: $light-color;
+        margin: auto;
+        opacity: 0.8;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: space-around;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+            li{
+                width: 280px;
+            }
+        }
+        }
+        //scroll animations
+    #about, .services, .portfolio, .testimonials, .contact{
+        
+        @include fade-in();
+
+            &.fade-in{
+                @include fade();
+            }
+    }
+}
+
+// Tablets
+@include mediaTb{
+    .hidden{
+        h1{
+            font-size: 2.6rem;
+        }
+    }
+.container{
+        padding: 15%;     
+    }
+
+    // Home
+    .home{
+        .info{
+            h3{
+                font-size:1rem;
+                font-weight: 100;
+            }
+            h1{
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: 0.85rem;
+            }
+        }
+    } 
+
+    // Services
+    .services{
+        .grid-container{
+            display: block;
+        }
+    }
+
+        // Paralax
+    .paralax{
+        height: 50vh;
+        .aside{
+        display: block;
+        padding-top: 10%;
+        text-align: center;
+    }
+    }
+    
+    .skill-container{
+            &.load-right{
+        width: 100%;
+        color: $light-color;
+        margin: auto;
+        opacity: 0.8;
+
+        display: block;
+            li{
+                width: 400px;
+            }
+        }
+        #skill{
+        h1{
+            font-size: 2rem;
+        }
+    }
+}
+.btn{
+    padding: .5rem .7rem;
+}
+}
+// SmartPhones
+@include mediaSm{
+    .img-grid-container{
+        display: block;
+    }
+    .hidden{
+        h1{
+            font-size: 2rem;
+        }
+    }
+    .container{
+        padding: 8%;
+    }
+    // Navigation Bar
+    .nav-cont{
+            
+    // Navigation Bar
+    nav.navbar{
+        height: 2.8rem;
+        width: 100vw;
+        background: $light-color;
+        position: fixed;
+        margin: initial;
+        left: initial;
+        top: initial;
+        bottom: 0;
+        right: initial;
+
+        ul{
+            width:80%;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+               -moz-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+
+
+            li{
+            padding: initial;
+            margin-top: -0.6rem;
+                
+                .hide{
+                    font-size: .7em;
+                    position: absolute;
+                }
+                .show{
+                    font-size: 1em;
+                    color: lighten($primary-color, 20);
+                }
+
+                &:hover{
+                    border-bottom: initial;
+                        .show{
+                            visibility: hidden;
+                            opacity: 0;
+
+                        
+                    }
+                    .hide{
+                            opacity: 1;
+                            color: $secondary-color;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    }
+
+
+    // Home
+    .home{
+        margin: auto;
+        text-align: center;
+        height: 100vh;
+
+        .potrait{
+            display: none;
+        }
+
+        .info{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+               -moz-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+        }
+    }
+
+            #about{
+        .about{
+        .about-info{
+            h2{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+.services{
+    h1{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .grid{
+        .icon{
+           font-size: 2em !important;
+           -webkit-animation: scale 1s infinite;
+              -moz-animation: scale 1s infinite;
+                -o-animation: scale 1s infinite;
+                   animation: scale 1s infinite;
+       }
+    }
+    
+}
+    .contact{
+        h1{
+        font-size: 1.5rem;
+        }
+    }
+
+   .portfolio #portfolio{
+       h1{
+           font-size: 1.5rem;
+           margin: 0;
+       }
+        .texts a{
+            -webkit-transform: translateY(10%);
+               -moz-transform: translateY(10%);
+                -ms-transform: translateY(10%);
+                 -o-transform: translateY(10%);
+                    transform: translateY(10%);
+        }
+    }
+    .test-container{
+        h1{
+            font-size: 1.5rem !important;
+            margin: 0;
+        }
+        p{
+            font-size: .9rem;
+        }
+    }
+    .contact-container{
+        h1{
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        h2{
+            font-size: 1.2rem;
+        }
+        p{
+            font-size: .94rem;
+        }
+    }
+    footer{
+        p{
+            margin-bottom: 2rem;
+        }
+        .copy{
+            img{
+                width: 50%;
+            }
+        }
+        .logo{
+            display: none;
+        }
+        .icon-cont{
+            display: none;
+        }
+        .social-icons{
+            width: 100%;
+            left: initial;
+            top: 10%;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: row;
+               -moz-box-orient: horizontal;
+               -moz-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+               -moz-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+        .mobile{
+            display: none;
+        &.desktop{
+            display: block;
+        }
+    }
+    }
+    #skill{
+        h1{
+            font-size: 1.5rem;
+        }
+    }
+
+        .skill-container{
+            &.load-right{
+
+        #skill{
+        h1{
+            font-size: 2rem;
+        }
+        }
+
+            li{
+                width: 250px;
+            }
+        }
+    }
+}
+
+
+
+
+// Extra small Smart Phones
+@include mediaXSm{
+    .hidden{
+        h1{
+            font-size: 1.5rem;
+        }
+    }
+
+}

@@ -1,0 +1,19 @@
+
+        h1{
+            font-size: 4rem;
+            color: $secondary-color;
+            margin-bottom: 2rem;
+        }
+
+        // cursor
+        .txt-type > .txt{
+            border-bottom: 2px solid $secondary-color;
+            color: $light-color;
+            padding-bottom: 1.2rem;
+            font-weight: 700;
+            border-right: 1px solid $light-color;
+            -webkit-animation: cursor.3s step-end infinite alternate;
+               -moz-animation: cursor.3s step-end infinite alternate;
+                 -o-animation: cursor.3s step-end infinite alternate;
+                    animation: cursor.3s step-end infinite alternate;
+    }

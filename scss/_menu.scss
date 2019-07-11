@@ -1,0 +1,83 @@
+/*nav{
+    background: $primary-color;
+    color: $light-color;
+    position: fixed;
+    border-right: 1px solid $primary-color;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 100vh;
+    overflow-x: hidden;
+    z-index: 100000;
+
+
+
+    ul{
+        top: 50%;
+        -webkit-transform: translateY(50%);
+           -moz-transform: translateY(50%);
+            -ms-transform: translateY(50%);
+             -o-transform: translateY(50%);
+                transform: translateY(50%);
+
+
+    li{
+        position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 1rem;
+        -webkit-justify-content: space-around;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+        font-size: 1.2em;
+
+        // &.active{
+        //     color: $secondary-color;
+        //     border-bottom: 1px solid $secondary-color;
+
+            .show{
+                color: $secondary-color;
+            }
+        }
+
+
+        &:hover {
+            color: $secondary-color;
+            border-bottom: 1px solid $secondary-color;
+
+            .show{
+                opacity: 0;
+            }
+            .hide{
+                opacity: 1;
+                color: $secondary-color;
+            }
+        }
+        .show{
+            color: lighten($primary-color, 25);
+            // display: block;
+
+        }
+        .hide{
+            position: absolute;
+            color: lighten($primary-color, 25);
+            display: block;
+            font-size: .6em;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+               -moz-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-align-self: center;
+                -ms-flex-item-align: center;
+                        -ms-grid-row-align: center;
+                    align-self: center;
+            opacity: 0;
+        }
+    }
+    }
+
+}*/

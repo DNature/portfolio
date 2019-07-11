@@ -1,0 +1,29 @@
+.img-grid-container{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1.3em 1fr;
+    grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: 'img1 img2';
+    grid-gap: 1.3em;
+    width: 90%;
+    padding: 1.6em;
+    background: white;
+    margin: 0 auto;
+
+    img{
+        width: 100%;
+        margin-bottom: 1.3em;
+        -webkit-box-shadow: 0 0 20px #555;
+                box-shadow: 0 0 20px #555;
+    }
+    .img1{
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        grid-area: img1;
+    }
+    .img2{
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+        grid-area: img2;
+    }
+}

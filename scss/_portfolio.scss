@@ -1,0 +1,135 @@
+// PORTFOLIO
+.portfolio{
+    background: rgba(255, 255, 255, 0.045);
+    width: 100%;
+
+    
+    #portfolio{
+
+        h1{
+            font-size: 3rem;
+        }
+        p{
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            color: $light-color;
+        }
+        
+
+
+        #items{
+            display: -ms-grid;
+            display: grid;
+                                                                                                            -ms-grid-rows: auto 2em auto;
+                                                                                                                grid-template-areas: 'item1 item2 item3' 'item4 item5 item6';
+            grid-gap: 2em;
+            -ms-grid-columns: 1fr 2em 1fr 2em 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 100%;
+            
+
+            .item{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+
+                &:hover{
+                    img{
+                        @include easeOut();
+                        -webkit-transform: scale(1.192);
+                           -moz-transform: scale(1.192);
+                            -ms-transform: scale(1.192);
+                             -o-transform: scale(1.192);
+                                transform: scale(1.192);
+                    }
+                }
+                
+                .more-info{
+                    color: $secondary-color;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;;
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 55%;
+                    font-weight: bold;
+                    z-index: 10;
+
+                }
+
+                img{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    
+                }
+                .texts{
+                    position: absolute;
+                    overflow: hidden;
+                    text-align: center;
+                    padding-top: 50%;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    opacity: 0;
+                    @include ease();
+                    cursor: pointer;
+                    
+                    &:hover{
+                        opacity: 1;
+                        background: rgba(0, 0, 0, 0.8);
+                        width: 100%;
+                        height: 100%;
+
+                       
+                    }
+                    
+                }
+                .texts:hover img{
+
+                    -webkit-transform: scale(1.2);
+                       -moz-transform: scale(1.2);
+                        -ms-transform: scale(1.2);
+                         -o-transform: scale(1.2);
+                            transform: scale(1.2);
+                }
+            }
+        
+                        #items-1{
+                            -ms-grid-row: 1;
+                            -ms-grid-column: 1;
+                            grid-area: item1;
+                        }
+                        #items-2{
+                            -ms-grid-row: 1;
+                            -ms-grid-column: 3;
+                            grid-area: item2;
+                        }
+            #items-3{
+                -ms-grid-row: 1;
+                -ms-grid-column: 5;
+                grid-area: item3;
+            }
+            #items-4{
+                -ms-grid-row: 3;
+                -ms-grid-column: 1;
+                grid-area: item4;
+            }
+            #items-5{
+                -ms-grid-row: 3;
+                -ms-grid-column: 3;
+                grid-area: item5;
+            }
+            #items-6{
+                -ms-grid-row: 3;
+                -ms-grid-column: 5;
+                grid-area: item6;
+            }
+        }
+    }
+}

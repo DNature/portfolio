@@ -1,0 +1,367 @@
+$primary-color: rgb(24, 24, 24);
+$secondary-color: rgb(19, 107, 179);
+$light-color: rgb(223, 223, 223);
+html{
+    scroll-behavior: smooth;
+}
+
+
+@mixin easeOut{
+    -webkit-transition: 0.5s ease-out;
+    -o-transition: 0.5s ease-out;
+    -moz-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+}
+@mixin ease{
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+
+@mixin fade-in{
+    opacity: 0;
+    -webkit-transition: 1s ease-in;
+    -o-transition: 1s ease-in;
+    -moz-transition: 1s ease-in;
+    transition: 1s ease-in;
+}
+@mixin fade{
+    opacity: 1;
+}
+
+.text-secondary{
+    color: $secondary-color;
+}
+/* Sample preloader */
+.preloader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-transition: opacity 0.25s linear;
+	-o-transition: opacity 0.25s linear;
+	-moz-transition: opacity 0.25s linear;
+	transition: opacity 0.25s linear;
+	background: #000000;
+	z-index: 100;
+}
+.fader {
+	opacity: 0;
+}
+/* Glow 2 */
+.glow-2 {
+	-webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	     -o-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	width: 20px;
+	height: 20px;
+	background: rgb(48, 241, 248);
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	-webkit-animation: glow-1 0.3s infinite alternate;
+	   -moz-animation: glow-1 0.3s infinite alternate;
+	     -o-animation: glow-1 0.3s infinite alternate;
+	        animation: glow-1 0.3s infinite alternate;
+}
+@-webkit-keyframes glow-1 {
+	from {
+		-webkit-transform: scale(0.7);
+		        transform: scale(0.7);
+		opacity: 0.2;
+	}
+	to {
+		-webkit-transform: scale(1.6);
+		        transform: scale(1.6);
+		opacity: 0.7;
+	}
+}
+@-moz-keyframes glow-1 {
+	from {
+		-moz-transform: scale(0.7);
+		     transform: scale(0.7);
+		opacity: 0.2;
+	}
+	to {
+		-moz-transform: scale(1.6);
+		     transform: scale(1.6);
+		opacity: 0.7;
+	}
+}
+@-o-keyframes glow-1 {
+	from {
+		-o-transform: scale(0.7);
+		   transform: scale(0.7);
+		opacity: 0.2;
+	}
+	to {
+		-o-transform: scale(1.6);
+		   transform: scale(1.6);
+		opacity: 0.7;
+	}
+}
+@keyframes glow-1 {
+	from {
+		-webkit-transform: scale(0.7);
+		   -moz-transform: scale(0.7);
+		     -o-transform: scale(0.7);
+		        transform: scale(0.7);
+		opacity: 0.2;
+	}
+	to {
+		-webkit-transform: scale(1.6);
+		   -moz-transform: scale(1.6);
+		     -o-transform: scale(1.6);
+		        transform: scale(1.6);
+		opacity: 0.7;
+	}
+}
+
+
+// Scroll Bar
+body::-webkit-scrollbar {
+    width: .3rem;
+    
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background: none;
+    @include ease();
+    &:hover{
+        background: rgba(255, 255, 255, 0.76);
+    }
+}
+ 
+body::-webkit-scrollbar-thumb {
+    
+  background-color: $secondary-color;
+  -webkit-border-radius: 5px;
+            border-radius: 5px;
+}
+// // End of Scroll bar
+
+// Basic Css Reset
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.5;
+    width: 100vw;
+    overflow-x: hidden;
+    background: #000;
+
+    .vr{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+           -moz-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+                z-index: -1000000;
+        .line{
+            background: $light-color;
+            width: 1px;
+            height: 100vh;
+            opacity: 0.1;
+        }
+    }
+    #super-container{
+        display: block;
+        background: rgba(0, 0, 0, 0.034);
+        visibility: visible;
+
+        &.hide{
+            visibility: hidden;
+            display: none;
+        }
+    }
+    .contianer{
+        width: 100vw;
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+
+    }
+
+    li{
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+    }
+    hr{
+        opacity: 0.1;
+        margin: 1em;
+        
+    }
+}
+.btn{
+    margin: 2rem .5em;
+    bottom: -2rem;
+    padding: 0.8rem 2.5rem;
+    border: none;
+    outline: none;
+    @include easeOut();
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    position: relative;
+    
+
+            &.btn-light{
+            background: $light-color;
+            color: $primary-color;
+
+            a{
+                color: $primary-color;
+            }
+
+            &:hover{
+                background: darken($light-color, 25);
+            }
+            }
+            &.btn-primary{
+            background: $secondary-color;
+            color: $light-color;
+
+            a{
+                color: $light-color;
+            }
+
+            &:hover{
+                background: darken($secondary-color, 10);
+            }
+            }
+}
+
+// Large Screens
+@mixin mediaLg {
+	@media screen and (min-width: 990px) {
+		@content;
+	}
+}
+// Medium Screens
+@mixin mediaMd{
+    @media screen and (max-width: 989.9px){
+        @content;
+    }
+}
+
+// Tablets
+@mixin mediaTb{
+    @media screen and (max-width: 800px) {
+        @content;
+    }
+}
+
+// Small Screens
+@mixin mediaSm{
+    @media screen and (max-width: 535px){
+        @content;
+    }
+}
+
+// ExtraSmall Screens
+@mixin mediaXSm{
+    @media screen and (max-width: 450px){
+        @content;
+    }
+}
+
+
+// Animations
+
+// // Rotation
+@-webkit-keyframes rotate {
+        100%{-webkit-transform: rotateZ(360deg);transform: rotateZ(360deg)}
+        
+    }
+
+    @-moz-keyframes rotate {
+        100%{-moz-transform: rotateZ(360deg);transform: rotateZ(360deg)}
+        
+    }
+
+    @-o-keyframes rotate {
+        100%{-o-transform: rotateZ(360deg);transform: rotateZ(360deg)}
+        
+    }
+
+    @keyframes rotate {
+        100%{-webkit-transform: rotateZ(360deg);-moz-transform: rotateZ(360deg);-o-transform: rotateZ(360deg);transform: rotateZ(360deg)}
+        
+    }
+
+// // scale
+
+    @-webkit-keyframes scale {
+    50%{-webkit-transform: scale(1.2);transform: scale(1.2)}
+    }
+
+    @-moz-keyframes scale {
+    50%{-moz-transform: scale(1.2);transform: scale(1.2)}
+    }
+
+    @-o-keyframes scale {
+    50%{-o-transform: scale(1.2);transform: scale(1.2)}
+    }
+
+    @keyframes scale {
+    50%{-webkit-transform: scale(1.2);-moz-transform: scale(1.2);-o-transform: scale(1.2);transform: scale(1.2)}
+    }
+
+// // cursor
+@-webkit-keyframes cursor {
+    50%{border-right: $light-color;}
+}
+
+
+@-moz-keyframes cursor {
+    50%{border-right: $light-color;}
+}
+
+
+@-o-keyframes cursor {
+    50%{border-right: $light-color;}
+}
+
+
+@keyframes cursor {
+    50%{border-right: $light-color;}
+}

@@ -1,0 +1,21 @@
+{
+  "name": "new-portfolio",
+  "version": "1.0.0",
+  "description": "Responsive Portfolio Website with Gsap and Scroll Magic",
+  "main": "index.js",
+  "homepage": "https://dnature.github.io/new-portfolio",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Divine Hycenth",
+  "license": "MIT",
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.12.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.5.1"
+  },
+  "keywords": []
+}

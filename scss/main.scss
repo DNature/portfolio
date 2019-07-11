@@ -1,0 +1,54 @@
+@import 'config';
+@import 'home';
+@import 'typedjs';
+@import 'about';
+@import 'services';
+@import 'portfolio';
+@import 'designs';
+@import 'projects'; 
+@import 'skill'; 
+
+.paralax{
+    position: relative;
+    background: url(../img/parallax.jpg);
+    -o-background-size: cover;
+       background-size: cover;
+    background-position: center;
+    min-height: 40vh;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-attachment: fixed; //Paralax
+    
+}
+
+.aside{
+    text-align: center;
+    position: absolute;
+    padding: 0% 3% 0 7%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    color: $light-color;
+    width: 100%;
+    
+    height: 100%;
+    background: rgba(0, 0, 0, 0.91);
+
+    p{
+        opacity: 0.8;
+    }
+    h1{
+        color: $light-color;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+// Scroll Magic Styling
+
+
+@import 'testimonials';
+@import 'blog';
+@import 'contact';
+@import 'footer';
+@import 'mobile';
