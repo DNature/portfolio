@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- New Meta Tags -->
+        <meta name="robots" content="noindex" />
+        <meta name="description" content="Divine nature graphic design gallery">
+
+        <!-- page icon -->
+        <link rel="icon" type="image/png" sizes="16x16" href="img/logo1.png">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300&amp;subset=latin-ext,vietnamese"
+            rel="stylesheet">
+        <!-- @import url('https://fonts.googleapis.com/css?family=Quicksand:300&subset=latin-ext,vietnamese'); -->
+
+        <!-- Styesheet -->
+        <link rel="stylesheet" href="css/main.min.css">
+
+        <!-- IonIcons -->
+        <link rel="stylesheet" href="css/ionicons.min.css">
+        <script src="js/ionicons.js"></script>
+
+        <!-- FontsAwesome -->
+        <link rel="stylesheet" href="css/fontawesome.all.min.css">
+        <script src="js/font-awesome/fontawesome.all.min.js"></script>
+
+        <style>
+            #myBtn {
+                padding: 1rem;
+                font-size: 1.3rem;
+                background: #1c3fdb;
+                color: white;
+                border-radius: 5px;
+                cursor: pointer;
+                opacity: .7;
+                position: fixed;
+                right: 2rem;
+                bottom: 2rem;
+                border: none;
+                outline: none;
+                transition: .7s;
+            }
+
+            #myBtn:hover {
+                padding-right: 5rem;
+                opacity: 1;
+            }
+
+            @media (max-width: 768px) {
+                .img-grid-container {
+                    display: block;
+                }
+            }
+
+        </style>
+        <!-- Title -->
+        <title>Divine Portfolio</title>
+    </head>
+
+    <body>
+        <div class="txt-main" style="margin: 3em;">
+            <h1>My Recent Designs</h1>
+        </div>
+        <div class="img-grid-container">
+            <div class="img img1">
+                <img src="graphics/ADUDA-1.JPG" alt="">
+                <img src="graphics/AHMED 2.jpg" alt="">
+                <img src="graphics/AMOS CARD.JPG" alt="">
+                <img src="graphics/Act of God-1.JPG" alt="">
+                <img src="graphics/BIBLE.JPG" alt="">
+                <img src="graphics/HAPPY 1 JPG.jpg" alt="">
+                <img src="graphics/CALL TO BAR 3.jpg" alt="">
+                <img src="graphics/IBWA.jpg2.jpg" alt="">
+                <img src="graphics/ILORIN-1.JPG" alt="">
+                <img src="graphics/ajao 4.JPG" alt="">
+                <img src="graphics/bleesed 4 new.jpg2.jpg" alt="">
+                <img src="graphics/christ 2-1-1.JPG" alt="">
+                <img src="graphics/flex sky.JPG" alt="">
+                <img src="graphics/ADUDA-1.JPG" alt="">
+            </div>
+            <div class="img img2">
+                <img src="graphics/ADUDAA.jpg" alt="">
+                <img src="graphics/CALL TO BAR 3.jpg3.jpg" alt="">
+                <img src="graphics/DALLAS SOAP 2.jpg" alt="">
+                <img src="graphics/DALLAS SOAP.jpg" alt="">
+                <img src="graphics/FAST FOOD.jpg" alt="">
+                <img src="graphics/FENDI-1.JPG" alt="">
+                <img src="graphics/GOGO.JPG" alt="">
+                <img src="graphics/GRACE.jpg3.jpg" alt="">
+                <img src="graphics/IMG-20170101-WA0026.jpg" alt="">
+                <img src="graphics/IMG_20180524_162130_241.JPG" alt="">
+                <img src="graphics/abga party.JPG" alt="">
+                <img src="graphics/a..jpg" alt="">
+                <img src="graphics/banner1.jpg" alt="">
+                <img src="graphics/banner4.jpg" alt="">
+            </div>
+        </div>
+
+        <button id="myBtn" onclick="topFunction()" title="Go to top">Top</button>
+
+        <script>
+            window.onscroll = function () {
+                scrollFunction();
+            }
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById('myBtn').style.display = 'block';
+                } else {
+                    document.getElementById('myBtn').style.display = 'none';
+                }
+
+            } function topFunction() {
+                document.body.scrollTop = 0;
+
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+
+        <!-- ScrollMagic && GSAP -->
+        <script src="assets/js/lib/greensock/TweenMax.min.js"></script>
+        <script src="assets/js/lib/greensock/plugins/ScrollToPlugin.min.js"></script>
+        <script src="assets/js/lib/modernizr.custom.min.js"></script>
+        <script src="assets/js/lib/iscroll-probe.js"></script>
+        <script src="scrollmagic/minified/ScrollMagic.min.js"></script>
+        <script src="scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+        <script src="scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+
+        <!-- End of Single Section -->
+        <script src="assets/js/tracking.js"></script>
+        <script src="js/slider.js" type="text/javascript"></script>
+        <script src="js/typed.js" type="text/javascript"></script>
+        <script src="js/ionicons.js"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+    </body>
+
+</html>
